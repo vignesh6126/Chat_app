@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Firebase admin credentials (should never be committed)
+config/serviceAccountKey.json
+
+# Firebase specific files that can be regenerated or are local
+firebase-debug.log
+firestore.indexes.json
+firestore.rules
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDEs/editors
+.vscode/
+.idea/
+
+# Mac system files
+__MACOSX/
+
+# Python cache if you're using python.py
+__pycache__/
+*.pyc
