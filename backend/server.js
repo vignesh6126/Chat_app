@@ -9,7 +9,11 @@ const app = express();
 const server = http.createServer(app);
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://www.chats-app.me',
+  credentials: true // allow cookies, headers, auth, etc.
+}));
+
 app.use(express.json());
 
 // Routes
@@ -21,6 +25,6 @@ const socketService = new SocketService(server);
 socketService.initialize();
 
 const PORT = process.env.PORT || 5000;
-server.listen(PORT, () => {
+server.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
 });
