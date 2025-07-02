@@ -27,3 +27,4 @@ __MACOSX/
 # Misc
 *.local
 *.cache
+/dist
