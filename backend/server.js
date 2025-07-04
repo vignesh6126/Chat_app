@@ -10,8 +10,8 @@ const server = http.createServer(app);
 
 // Middleware
 app.use(cors({
-  origin: 'https://www.chats-app.me',
-  credentials: true // allow cookies, headers, auth, etc.
+  origin: ['https://www.chats-app.me', 'https://chats-app.me'],
+  credentials: true
 }));
 
 app.use(express.json());
